@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="utf-8">
+<title>Lista de Emprestimos</title>
+<link rel="icon" href="imagens/book1.png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="menu">
+App Biblioteca - Home - Cadastrar Empréstimo - Listar Empréstimo
+</div>
+
+	<h1>Criar novo empréstimo</h1>
+	<form name="frmEmprestimo" action="insert">
+		<table>
+			<tr>
+				<td><input type="text" name="data" placeholder="data" class=
+				"linhainteira"></td>
+			</tr>
+			<tr>
+				<td><input type="text" name="observacao" placeholder="observacao" class="bloco"></td>
+			</tr>
+			<tr>
+				<td><input type="text" name="usuario" placeholder="usuario" class=
+				"meialinha"></td>
+			</tr>
+			<tr>
+				<td><input type="text" name="tipousuario" placeholder="tipousuario" class=
+				"meialinha"></td>
+			</tr>
+		</table>
+		<input type="button" value="Adicionar" class="Botao1" onclick="validar()">
+	</form>
+	<script src="scripts/validador.js"></script>	
+</body>
+</html>

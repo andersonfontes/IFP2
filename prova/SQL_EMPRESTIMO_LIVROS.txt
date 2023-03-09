@@ -1,0 +1,47 @@
+create database dbemprestimo;
+
+
+use dbemprestimo;
+
+
+create table emprestimo (
+	
+codigo bigint primary key auto_increment,
+    
+data VARCHAR(255),
+    
+observacao VARCHAR(255),
+ 
+usuario VARCHAR(255),
+    
+tipoUsuario VARCHAR(255)
+    
+);
+    
+
+create table livrosemprestimo (
+	
+codigole bigint primary key auto_increment,
+    
+codLivro VARCHAR(255),
+    
+titulo VARCHAR(255),
+    
+codEmprestimo VARCHAR(255),
+CONSTRAINT fk_LE FOREIGN KEY (codEmprestimo)  REFERENCES emprestimo (codigo)
+);
+
+
+insert into emprestimo( codigo , data , observacao , usuario, tipoUsuario )
+values('1','31/12/2022','Autorizado devolver após o recesso','O Grande Homem', 'Aluno');
+
+    
+insert into livrosemprestimo ( codigo , codLivro , titulo , codEmprestimo )
+    
+values ('1', '7896543210', 'O Grande Homem', '1');
+    
+
+insert into livrosemprestimo ( codigo , codLivro , titulo , codEmprestimo )
+    
+values ('2', '7896543211', 'A Grande Mulher', '1'); 
+
